@@ -14,16 +14,16 @@ class Employee:
         return '{} {}'.format(self.first, self.last)
 
 #TODO Instantiate Classes
-    emp_1 = Employee('Corey', 'Schaefer', 50000) # this is how class objects are instantiated
-    emp_2 = Employee('Test', 'User', 60000)
+emp_1 = Employee('Corey', 'Schaefer', 50000) # this is how class objects are instantiated
+emp_2 = Employee('Test', 'User', 60000)
 
-#TODO Instance Variables
+#TODO Create Instance Variables
     # instance variable contain data that is unique to each instance,
     # the below mentioned is an example of instance variable
-    print(emp_1);
-    print(emp_2;) # these both will have unique addresses
-    print(emp_1.fullname()) # here self is getting passed in automatically
+print(emp_1);
+print(emp_2); # these both will have unique addresses
+print(emp_1.fullname()) # here self is getting passed in automatically
 
-# TODO Class Variables
-    Employee.fullname(emp_1); # because this a class variable we need to explicitly
-    Employee.fullname(emp_2); # pass in the instance
+# TODO Create Class Variables
+Employee.fullname(emp_1); # because this a class variable we need to explicitly
+Employee.fullname(emp_2); # pass in the instance
