@@ -1,6 +1,6 @@
-.idea/
-venv/
 lib/
 bin/
+/*/.idea/
+venv/
 .Python
 __pycache__/

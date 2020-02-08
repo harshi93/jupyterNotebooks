@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+    <!--#TODO templatize string substitution -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head%}{% endblock %} <!-- This is jinja syntax -->
+
+</head>
+
+<!--#TODO templatize looping logic-->
+    {% block body%}
+    {% endblock %}
+
+<div class="content">
+    <h1>Task Master</h1>
+    {% if tasks|length < 1 %}
+    <h4>There are no tasks, Create one below</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{ task.id }}">DELETE</a>
+                    <br>
+                    <a href="/update/{{ task.id }}">UPDATE</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Task">
+    </form>
+</div>
+</html>
