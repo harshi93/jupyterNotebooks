@@ -1,0 +1,6 @@
+lib/
+bin/
+.idea/
+venv/
+.Python
+__pycache__/

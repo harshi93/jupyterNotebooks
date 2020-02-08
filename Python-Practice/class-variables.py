@@ -11,7 +11,7 @@ that doesn't get listed out here but still returns a valid response will get
 inherited from the class to which the object belongs
 """
 
-class Employee:
+Class Employee:
 
     num_of_emps = 0
     raise_amount = 1.04
@@ -46,6 +46,7 @@ print(emp_1.__dict__)
 print(emp_2.raise_amount)
 
 # TODO return amount after raise is applied for both employees
+
 print(Employee.apply_raise(emp_1))
 print(Employee.apply_raise(emp_2))
 print(emp_1.apply_raise())

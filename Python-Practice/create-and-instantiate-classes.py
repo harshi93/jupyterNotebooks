@@ -10,7 +10,7 @@ class Employee:
     instance variable contain data that is unique to each instance
     """
 
-    def __init__(self, first, last, name, pay):
+   def __init__(self, first, last, name, pay):
         self.first = first
         self.last = last
         self.pay = pay
@@ -18,7 +18,6 @@ class Employee:
 
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
-
 
 # TODO Instantiate Classes
 
