@@ -11,7 +11,7 @@ that doesn't get listed out here but still returns a valid response will get
 inherited from the class to which the object belongs
 """
 
-Class Employee:
+class Employee:
 
     num_of_emps = 0
     raise_amount = 1.04
