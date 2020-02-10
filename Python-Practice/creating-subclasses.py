@@ -31,19 +31,17 @@ class Employee:
 
 
 class Developer(Employee):
+    """
+    The use super function to access parent class is mostly useful in cases where you want to
+    leverage single level inheritance
+
+    In cases where we have to implement multi-level inheritance it makes more sense to leverage
+    class names to access class methods for e.g. in multi-level inheritance we would use
+    Employees.__init__() to access attributes of employees class rather using super().
+    """
+
     raise_amount = 1.10
 
-    """
-    The use super function to access parent class is mostly 
-    useful in cases where you want to leverage single level
-    inheritance 
-    
-    In cases where we have to implement multi-level inheritance 
-    it makes more sense to leverage class names to access class methods
-    for e.g. in multi-level inheritance we would use 
-    Employees.__init__() to access attributes of employees class
-    rather using super().
-    """
     def __init__(self, first, last, pay, prog_lang):
         super().__init__(first, last, pay)
         self.prog_lang = prog_lang
