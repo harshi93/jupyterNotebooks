@@ -24,9 +24,9 @@ print(r.text)
 print(r.headers)
 
 # TODO print out comic image and write it to a file
-#r = requests.get('https://imgs.xkcd.com/comics/python.png')
-#with open('comic.png', 'wb') as f:
-#    f.write(r.content)
+r = requests.get('https://imgs.xkcd.com/comics/python.png')
+with open('comic.png', 'wb') as f:
+    f.write(r.content)
 
 # TODO get response for user query
 
